@@ -21,7 +21,8 @@
   "targets": {
     "default": {
       "distDir": "./",
-      "sourceMap": false
+      "sourceMap": false,
+      "publicUrl": "./"
     }
   }
 }
