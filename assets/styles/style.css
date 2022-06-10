@@ -24,7 +24,6 @@ body {
   padding: 72px 52px;
   gap: 31px;
   max-width: 584px;
-  max-height: 621px;
   background: #FFFFFF;
   border-radius: 16px;
 }
@@ -68,6 +67,44 @@ body {
   text-decoration: none;
 }
 
+.maintenance__card--details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maintenance__card--details__content {
+  height: 0;
+  overflow: hidden;
+  transition: height 400ms;
+}
+
+.maintenance__card--details__action {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #212529;
+}
+
+.maintenance__card--details__action i {
+  transition: transform 400ms;
+}
+
+.maintenance__card--details.expanded .maintenance__card--details__action,
+.maintenance__card--details__action:hover {
+  color: #7927FF;
+}
+
+.maintenance__card--details.expanded .maintenance__card--details__action i {
+  transform: rotate(180deg);
+}
+
 @media only screen and (max-width: 584px) {
   .maintenance__card {
     padding: 36px 26px;
@@ -86,5 +123,9 @@ body {
   .maintenance__card--action {
     font-size: 13px;
     height: 37px;
+  }
+
+  .maintenance__card--details__action {
+    font-size: 14px;
   }
 }

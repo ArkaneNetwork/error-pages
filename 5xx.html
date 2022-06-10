@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>Venly Market - Digital Asset Store</title>
   <link rel="icon"
         type="image/x-icon"
@@ -11,6 +12,7 @@
         href="assets/styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
 </head>
 <body>
@@ -41,7 +43,41 @@
     Back to Venly
   </a>
 
-  <p>::CLOUDFLARE_ERROR_500S_BOX::</p>
+  <div class="maintenance__card--details">
+    <div class="maintenance__card--details__action">
+      <div class="maintenance__card--details__action--text">Show more</div>
+      <i class="fa fa-angle-down"></i>
+    </div>
+
+    <div class="maintenance__card--details__content">
+      ::CLOUDFLARE_ERROR_500S_BOX::
+    </div>
+  </div>
 </div>
+
+<script>
+  let isDetailsExpanded = false;
+
+  const detailsActionBtn = document.querySelector('.maintenance__card--details__action');
+  const details = document.querySelector('.maintenance__card--details');
+  const detailsContent = document.querySelector('.maintenance__card--details__content');
+
+  detailsActionBtn.addEventListener('click', (ev) => {
+      const errorDetails = document.querySelector('.cf-error-details');
+      const detailsActionText = detailsActionBtn.querySelector('.maintenance__card--details__action--text');
+
+      if (isDetailsExpanded) {
+        detailsContent.style.height = `${0}px`;
+        details.classList.remove('expanded');
+        detailsActionText.textContent = 'Show more';
+      } else {
+        detailsContent.style.height = `${errorDetails ? errorDetails.clientHeight : 0}px`;
+        details.classList.add('expanded');
+        detailsActionText.textContent = 'Show less';
+      }
+
+      isDetailsExpanded = !isDetailsExpanded;
+  });
+</script>
 </body>
 </html>
