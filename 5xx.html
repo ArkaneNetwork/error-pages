@@ -13,19 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900&display=swap"
         rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
 </head>
 <body>
 
 <div class="maintenance__card">
-  <!--  <lottie-player src="assets/animations/lottie-maintenance-animation.json"-->
-  <!--                 background="transparent"-->
-  <!--                 speed="1"-->
-  <!--                 loop-->
-  <!--                 renderer="svg"-->
-  <!--                 autoplay>-->
-  <!--  </lottie-player>-->
-
   <img class="maintenance__card--img"
        src="assets/images/gear-img.png"
        alt="Maintenance">
@@ -55,29 +46,6 @@
   </div>
 </div>
 
-<script>
-  let isDetailsExpanded = false;
-
-  const detailsActionBtn = document.querySelector('.maintenance__card--details__action');
-  const details = document.querySelector('.maintenance__card--details');
-  const detailsContent = document.querySelector('.maintenance__card--details__content');
-
-  detailsActionBtn.addEventListener('click', (ev) => {
-      const errorDetails = document.querySelector('.cf-error-details');
-      const detailsActionText = detailsActionBtn.querySelector('.maintenance__card--details__action--text');
-
-      if (isDetailsExpanded) {
-        detailsContent.style.height = `${0}px`;
-        details.classList.remove('expanded');
-        detailsActionText.textContent = 'Show more';
-      } else {
-        detailsContent.style.height = `${errorDetails ? errorDetails.clientHeight : 0}px`;
-        details.classList.add('expanded');
-        detailsActionText.textContent = 'Show less';
-      }
-
-      isDetailsExpanded = !isDetailsExpanded;
-  });
-</script>
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>

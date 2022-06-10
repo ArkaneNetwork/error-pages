@@ -1,0 +1,25 @@
+{
+  "name": "error-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel 5xx.html",
+    "build": "parcel build 5xx.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArkaneNetwork/error-pages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArkaneNetwork/error-pages/issues"
+  },
+  "homepage": "https://github.com/ArkaneNetwork/error-pages#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
